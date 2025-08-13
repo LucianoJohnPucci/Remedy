@@ -1,5 +1,7 @@
 "use client";
 import { Card, Col, Row } from "antd";
+import TicketStatsCards from "@/components/dashboard/TicketStatsCards";
+import SentimentPieChart from "@/components/dashboard/SentimentPieChart";
 import dynamic from "next/dynamic";
 
 // Dynamically import Recharts to avoid SSR issues
@@ -11,6 +13,7 @@ export default function DashboardPage() {
   return (
     <>
       <h1 className="text-2xl font-semibold mb-4">Dashboard</h1>
+      <TicketStatsCards className="mb-4" />
       <Row gutter={[16, 16]}>
         <Col span={12}>
           <Card title="Ticket Volume (Sample)">
@@ -18,7 +21,9 @@ export default function DashboardPage() {
           </Card>
         </Col>
         <Col span={12}>
-          <Card title="Placeholder">More widgets soon...</Card>
+          <Card title="Ticket Sentiment Breakdown">
+            <SentimentPieChart />
+          </Card>
         </Col>
       </Row>
     </>
