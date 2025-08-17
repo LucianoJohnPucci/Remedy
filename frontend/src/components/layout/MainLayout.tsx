@@ -1,6 +1,6 @@
 "use client";
-import { Layout, Menu } from "antd";
-import { HomeOutlined, SettingOutlined } from "@ant-design/icons";
+import { Layout, Menu, Button } from "antd";
+import { HomeOutlined, SettingOutlined, MenuFoldOutlined, MenuUnfoldOutlined } from "@ant-design/icons";
 import Link from "next/link";
 import { ReactNode, useState } from "react";
 
@@ -16,12 +16,23 @@ export default function MainLayout({ children }: Props) {
   return (
     <Layout style={{ minHeight: "100vh" }}>
       <Sider
-        collapsible
+        collapsible={false}
         collapsed={collapsed}
-        onCollapse={setCollapsed}
         theme="light"
+        width={250}
+        collapsedWidth={80}
       >
-        <div className="my-4 text-center font-bold text-lg">Remedy</div>
+        <div className="flex items-center justify-between p-4 border-b">
+          <div className={`font-bold text-lg transition-opacity ${collapsed ? 'opacity-0 w-0' : 'opacity-100'}`}>
+            Remedy
+          </div>
+          <Button
+            type="text"
+            icon={collapsed ? <MenuUnfoldOutlined /> : <MenuFoldOutlined />}
+            onClick={() => setCollapsed(!collapsed)}
+            className="flex items-center justify-center"
+          />
+        </div>
         <Menu
           theme="light"
           defaultSelectedKeys={["dashboard"]}
