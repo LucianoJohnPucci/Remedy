@@ -4,7 +4,7 @@ import TicketStatsCards from "@/components/dashboard/TicketStatsCards";
 import SentimentPieChart from "@/components/dashboard/SentimentPieChart";
 import StatsFrames from "@/components/dashboard/StatsFrames";
 import AIChatFrame from "@/components/dashboard/AIChatFrame";
-import Section2Columns from "@/components/dashboard/Section2Columns";
+import DevOpsColumns from "@/components/dashboard/DevOpsColumns";
 import dynamic from "next/dynamic";
 
 // Dynamically import Recharts to avoid SSR issues
@@ -47,10 +47,10 @@ export default function DashboardPage() {
         </Row>
       </div>
 
-      {/* Section 2: Workflow Columns */}
+      {/* Section 2: DevOps Columns */}
       <div className="mb-8">
-        <h2 className="text-xl font-semibold mb-4">Workflow Status</h2>
-        <Section2Columns />
+        <h2 className="text-xl font-semibold mb-4">DevOps Management</h2>
+        <DevOpsColumns />
       </div>
     </>
   );

@@ -8,19 +8,19 @@ interface ColumnData {
 
 const columnData: ColumnData[] = [
   {
-    title: "Active Agents",
-    items: ["Agent Smith", "Agent Johnson", "Agent Williams", "Agent Brown", "Agent Davis"]
-  },
-  {
-    title: "Open/Ready",
+    title: "Open",
     items: ["Ticket #1234", "Ticket #1235", "Ticket #1236", "Ticket #1237", "Ticket #1238"]
   },
   {
-    title: "In Progress",
+    title: "In-Progress",
     items: ["Ticket #1220", "Ticket #1221", "Ticket #1222", "Ticket #1223"]
   },
   {
-    title: "Completed",
+    title: "Hurdles",
+    items: ["Ticket #1240", "Ticket #1241", "Ticket #1242"]
+  },
+  {
+    title: "Closed/Completed",
     items: ["Ticket #1200", "Ticket #1201", "Ticket #1202", "Ticket #1203", "Ticket #1204", "Ticket #1205"]
   }
 ];

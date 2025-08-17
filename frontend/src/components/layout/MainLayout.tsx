@@ -44,6 +44,11 @@ export default function MainLayout({ children }: Props) {
               label: <Link href="/dashboard">Dashboard</Link>,
             },
             {
+              key: "workflow",
+              icon: <span style={{ fontSize: '14px' }}>➡️</span>,
+              label: <Link href="/workflow">Workflow</Link>,
+            },
+            {
               key: "settings",
               icon: <SettingOutlined />,
               label: <Link href="/settings">Settings</Link>,
